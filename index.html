@@ -1,1 +1,8 @@
-test
+<label>Copy this code to the application</label>
+<input id="code" disabled>
+
+<script>
+  let params = new URL(document.location.toString()).searchParams;
+  let code = params.get("code");
+  document.querySelector('#code').value = code;
+</script>
