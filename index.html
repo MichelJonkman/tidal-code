@@ -1,8 +1,15 @@
 <label>Copy this code to the application</label>
 <input id="code" disabled>
+<button onclick="copyToClipboard()">Copy code</button>
 
 <script>
   let params = new URL(document.location.toString()).searchParams;
   let code = params.get("code");
   document.querySelector('#code').value = code;
+
+  function copyToClipboard() {
+    var textBox = document.getElementById("code");
+    textBox.select();
+    document.execCommand("copy");
+  }
 </script>
