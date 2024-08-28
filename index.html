@@ -8,8 +8,6 @@
   document.querySelector('#code').value = code;
 
   function copyToClipboard() {
-    var textBox = document.getElementById("code");
-    textBox.select();
-    document.execCommand("copy");
+    navigator.clipboard.writeText(code);
   }
 </script>
